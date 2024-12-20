@@ -1,0 +1,48 @@
+import os
+
+structure = {
+    "backend": [
+        "app/api/v1/endpoints",
+        "app/core",
+        "app/models",
+        "app/schemas",
+        "app/services",
+        "app/db",
+        "tests",
+    ],
+    "frontend": [
+        "src/components",
+        "src/pages",
+        "src/styles",
+        "public",
+    ],
+    "ar-visualization": [
+        "assets",
+        "scenes",
+        "scripts",
+    ],
+    "docs": [],
+}
+
+root = "streaming-optimization"
+
+for folder, subfolders in structure.items():
+    for subfolder in subfolders:
+        os.makedirs(os.path.join(root, folder, subfolder), exist_ok=True)
+    if not subfolders:  # Für leere Ordner
+        os.makedirs(os.path.join(root, folder), exist_ok=True)
+
+# Beispiel-Dateien erstellen
+files = [
+    "backend/app/main.py",
+    "backend/requirements.txt",
+    "frontend/src/index.js",
+    "frontend/package.json",
+    "ar-visualization/README.md",
+    "docker-compose.yml",
+    ".gitignore",
+]
+
+for file in files:
+    with open(os.path.join(root, file), "w") as f:
+        f.write("")  # Leere Datei erstellen

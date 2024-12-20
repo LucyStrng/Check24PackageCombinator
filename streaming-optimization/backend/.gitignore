@@ -1,0 +1,10 @@
+# Ignoriere die .env-Datei
+.env
+
+# Ignoriere die virtuelle Umgebung
+venv/
+
+# Python-Zwischen- und Cache-Dateien
+__pycache__/
+*.pyc
+*.pyo
