@@ -84,6 +84,8 @@ Das Backend bietet mehrere API-Endpunkte, die folgende Funktionalitäten ermögl
     venv\Scripts\activate     # Für Windows
     pip install -r requirements.txt
 3. Datenbankinitialisieren 
+    ```bash
+    python load_data.py
 4. Backend starten 
    ```bash 
    uvicorn app.main:app --reload
